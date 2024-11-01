@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Robotics Project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="Cute Planet_ Robot One.jpeg" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Header */
+        header {
+           /* background-color: #007bff;*/
+            background-color: transparent;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            background: url(hand.jpg);
+            background-repeat: no-repeat;
+            background-position: absolute;
+            background-size: cover;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #ffe600;
+        }
+
+        /* Main content area */
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #fff;
+        }
+
+        .article {
+            display: flex;
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #e8f0fe;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+       .article img {
+    width: 350px;  /* Increased from 250px to 350px */
+    height: auto;
+    border-radius: 8px;
+    margin-right: 20px;
+    
+}
+
+        .article-content {
+            flex: 1;
+        }
+
+        .article h3 {
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .article p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        .article a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 10px;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .article a:hover {
+            background-color: #0056b3;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #007bff;
+            color: white;
+        }
+
+        footer a {
+            color: #ffe600;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Robotica</h1>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<!-- Main content section -->
+<div class="content">
+    <h2>Latest News</h2>
+
+    <!-- Article 1 -->
+    <div class="article">
+        <img src="mit.jpeg" alt="Robotics Image" a href="full-article-1.html">
+        <div class="article-content">
+            <h3>Breakthrough in Robotics Automation</h3>
+            <p>
+                Our latest project has revolutionized the way robots interact with their environment, enhancing precision and efficiency in industrial tasks. This project is designed to push the limits of robotic automation in a real-world setting...
+            </p>
+            <a href="full-article-1.html">Read Full Article</a>
+        </div>
+    </div>
+
+    <!-- Article 2: Professor Ellen Roche -->
+    <div class="article">
+        <img src="ellen.jpg" alt="Professor Ellen Roche" a href="full-article-ellen-roche.html">
+        <div class="article-content">
+            <h3>Engineering and Matters of the Heart</h3>
+            <p>
+                Professor Ellen Roche is creating the next generation of medical devices to help repair hearts, lungs, and other tissues. Her work is making groundbreaking progress in the biomedical engineering field, with applications that could save countless lives...
+            </p>
+            <a href="full-article-ellen-roche.html">Read Full Article</a>
+        </div>
+    </div>
+
+</div>
+
+<!-- Footer Section -->
+<footer>
+    <p>&copy; 2024 Robotica. All Rights Reserved.</p>
+    <a href="privacy.html">Privacy Policy</a> |
+    <a href="terms.html">Terms of Service</a>
+</footer>
+
+</body>
+
+<script>
+document.getElementById('login-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    // You can add more logic here for email and password validation.
+    // Assuming login is successful:
+
+    if (email === "user@example.com" && password === "password123") { // Example validation
+        window.location.href = 'home.html'; // Redirect to home page after login
+    } else {
+        alert('Invalid email or password');
+    }
+    document.getElementById("read-article-link").addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent default link behavior
+
+    // Show the full article section
+    document.querySelector(".full-article-section").style.display = "block";
+
+    // Scroll smoothly to the full article section
+    document.querySelector(".full-article-section").scrollIntoView({
+        behavior: 'smooth'
+    });
+});
+
+});
+</script>
+
+</html>

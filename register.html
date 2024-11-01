@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Robotica</title>
+    <link rel="stylesheet" href="project.css">
+    <script defer src="register.js"></script>
+</head>
+<body>
+    <section>
+        <form id="register-form">
+            <h1>Register</h1>
+            <div class="inputbox">
+                <ion-icon name="person-outline"></ion-icon>
+                Username: &nbsp; <input type="text" id="username" required placeholder="Username">
+            </div>
+            <div class="inputbox">
+                <ion-icon name="mail-outline"></ion-icon>
+                Email: &nbsp; &nbsp; &nbsp; <input type="email" id="email" required placeholder="Email">
+            </div>
+            <div class="inputbox">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                Password: <input type="password" id="password" required placeholder="Password">
+            </div>
+            <div class="inputbox">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                Confirm Password: <input type="password" id="confirm-password" required placeholder="Confirm Password">
+            </div>
+            <button type="submit">Register</button>
+
+            <div class="register">
+                <p>Already have an account? <a href="index.html">Log in</a></p>
+            </div>
+            <p id="error-message" style="color: red; display: none;">Please fix the errors</p>
+            <p id="success-message" style="color: green; display: none;">Registration successful!</p>
+        </form>
+    </section>
+
+    <script>
+        document.getElementById('register-form').addEventListener('submit', async function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+
+            const errorMessage = document.getElementById('error-message');
+            const successMessage = document.getElementById('success-message');
+
+            // Clear any previous messages
+            errorMessage.style.display = 'none';
+            successMessage.style.display = 'none';
+
+            // Validate inputs
+            if (username.length < 3) {
+                errorMessage.textContent = "Username must be at least 3 characters long.";
+                errorMessage.style.display = 'block';
+            } else if (!validateEmail(email)) {
+                errorMessage.textContent = "Invalid email format.";
+                errorMessage.style.display = 'block';
+            } else if (password.length < 6) {
+                errorMessage.textContent = "Password must be at least 6 characters long.";
+                errorMessage.style.display = 'block';
+            } else if (password !== confirmPassword) {
+                errorMessage.textContent = "Passwords do not match.";
+                errorMessage.style.display = 'block';
+            } else {
+                // If validation passes, send registration data to the server
+                try {
+                    const response = await fetch('http://localhost:3000/auth/register', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({ username, email, password }), // Send username, email, and password
+                    });
+
+                    const data = await response.json();
+                    if (response.ok) {
+                        successMessage.textContent = "Registration successful! Redirecting to login page...";
+                        successMessage.style.display = 'block';
+
+                        // Redirect to login page after a brief pause
+                        setTimeout(() => {
+                            window.location.href = 'index.html';
+                        }, 2000);
+                    } else {
+                        errorMessage.textContent = data.error || "Registration failed. Please try again.";
+                        errorMessage.style.display = 'block';
+                    }
+                } catch (error) {
+                    console.error('Error during registration:', error);
+                    errorMessage.textContent = "An error occurred. Please try again later.";
+                    errorMessage.style.display = 'block';
+                }
+            }
+        });
+
+        function validateEmail(email) {
+            const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            return re.test(String(email).toLowerCase());
+        }
+    </script>
+</body>
+</html>

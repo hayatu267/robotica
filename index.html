@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robotica</title>
+    <link rel="stylesheet" href="project.css">
+    <link rel="shortcut icon" href="Cute Planet_ Robot One.jpeg" type="image/x-icon">
+</head>
+<body>
+    <section>
+        <form id="login-form"> <!-- Add form ID -->
+            <h1>Log In</h1>
+            <div class="inputbox">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                Email: <input type="email" id="email" required placeholder="email"> <br> <!-- Add input ID -->
+                Password: <input type="password" id="password" required placeholder="password"> <!-- Add input ID -->
+            </div>
+            <div class="forget">
+                <label for="rememberMe">
+                    <input type="checkbox" id="rememberMe"> Remember me</label> <!-- Add checkbox ID -->
+                <a href="#">Forget password</a>
+            </div>
+            <button type="submit">Log In</button> <!-- Remove a href, use JS for redirection -->
+            <div class="register">
+                <p>I don't have an account <a href="register.html">Register</a></p>
+            </div>
+            <p id="error-message" style="color: red; display: none;"></p>
+            <p id="success-message" style="color: green; display: none;"></p>
+        </form>
+    </section>
+</body>
+<script>
+document.getElementById('login-form').addEventListener('submit', async function(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const errorMessage = document.getElementById('error-message'); // Ensure you have this element in your HTML
+    const successMessage = document.getElementById('success-message'); // Ensure you have this element in your HTML
+
+    // Clear previous messages
+    errorMessage.style.display = 'none';
+    successMessage.style.display = 'none';
+
+    try {
+        const response = await fetch('http://localhost:3000/auth/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ email, password }),
+        });
+        console.log('Response:', response); 
+        
+        const data = await response.json();
+        if (response.ok) {
+            successMessage.textContent = "Login successful!";
+            successMessage.style.display = 'block';
+            // Redirect or handle the successful login
+            window.location.href = 'home.html'; // Change to your homepage URL
+        } else {
+            errorMessage.textContent = data.error || "Login failed. Please try again.";
+            errorMessage.style.display = 'block';
+        }
+    } catch (error) {
+        console.error('Error during login:', error);
+        errorMessage.textContent = "An error occurred. Please try again later.";
+        errorMessage.style.display = 'block';
+    }
+});
+</script>
+</html>

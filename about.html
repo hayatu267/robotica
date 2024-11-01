@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Robotics Project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Roboto', Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    /* Header styling */
+    header {
+        background: #007bff;
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    header h1 {
+        font-size: 2.5em;
+        margin-bottom: 0;
+        animation: fadeInDown 0.5s ease;
+    }
+
+    /* Navigation Links */
+    header nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 1.1em;
+        transition: color 0.3s ease;
+    }
+
+    header nav a:hover {
+        color: #ffe600;
+        text-shadow: 0 0 5px #ffe600;
+    }
+
+    /* About Section Styling */
+    .about-section {
+        padding: 100px 20px 20px 20px;
+        text-align: center;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+        background: #fff;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        animation: fadeIn 1s ease;
+        position: relative; /* Added for relative positioning */
+    }
+
+    h2 {
+        font-size: 2.2em;
+        margin-bottom: 20px;
+        color: #007bff;
+        animation: slideIn 0.5s ease;
+    }
+
+    h3 {
+        margin-top: 20px;
+        font-size: 1.8em;
+        color: #333;
+    }
+
+    p {
+        font-size: 1.2em;
+        margin-bottom: 20px;
+        line-height: 1.8;
+        transition: color 0.3s ease;
+    }
+
+    p:hover {
+        color: #007bff;
+    }
+
+    ul {
+        list-style-type: disc;
+        padding-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    li {
+        font-size: 1.1em;
+        margin-bottom: 10px;
+    }
+
+    /* Button Styling */
+    button {
+        padding: 12px 24px;
+        background: #007bff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1.1em;
+        transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        position: relative;
+        overflow: hidden; /* Added to clip the shadow */
+    }
+
+    button:hover {
+        background-color: #0056b3;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Button animation on click */
+    button:active {
+        transform: scale(0.95);
+    }
+
+    /* Message box styling */
+    .message {
+        display: none;
+        margin-top: 20px;
+        background-color: #e7f3ff;
+        padding: 15px;
+        border-radius: 8px;
+        color: #007bff;
+        border: 1px solid #007bff;
+        animation: fadeInUp 0.8s ease;
+    }
+
+    /* Footer styling */
+    footer {
+        text-align: center;
+        padding: 20px;
+        background: #007bff;
+        color: white;
+        margin-top: 40px;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+
+    footer p {
+        margin: 0;
+    }
+
+    footer a {
+        color: #ffe600;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+        color: #fff;
+        text-shadow: 0 0 5px #fff;
+    }
+
+    /* Keyframes for animations */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes slideIn {
+        from {
+            transform: translateY(-10px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadeInDown {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+</style>
+<body>
+
+<!-- Header Section -->
+<header>
+    <h1>About Us</h1>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<!-- Main Content Section -->
+<section class="about-section">
+    <div class="container">
+        <h2>Welcome to <span id="project-name">Robotica</span>!</h2>
+        <p>
+            At <span id="project-name-2">Robotica</span>, we are passionate about advancing the field of robotics and developing autonomous solutions that shape the future. Our mission is to build innovative robotic systems that can revolutionize industries, improve efficiency, and enhance everyday life.
+        </p>
+        <h3>Our Vision</h3>
+        <p>
+            We envision a world where robotics and AI-driven technologies work alongside humans to solve complex challenges, automate tedious tasks, and unlock new levels of productivity. We aim to lead this change through cutting-edge research and hands-on projects.
+        </p>
+        <h3>Our Mission</h3>
+        <ul>
+            <li><strong>Innovate:</strong> Create novel solutions for real-world problems using robotics and AI.</li>
+            <li><strong>Automate:</strong> Build systems that improve efficiency in industries such as manufacturing, healthcare, logistics, and more.</li>
+            <li><strong>Educate:</strong> Empower students and tech enthusiasts to explore robotics, providing resources and mentorship.</li>
+        </ul>
+        <h3>Our Values</h3>
+        <ul>
+            <li>Innovation</li>
+            <li>Collaboration</li>
+            <li>Sustainability</li>
+            <li>Education</li>
+        </ul>
+        <h3>What We Do</h3>
+        <p>
+            We focus on:
+        </p>
+        <ul>
+            <li>Autonomous Robotics</li>
+            <li>AI & Machine Learning Integration</li>
+            <li>Hands-on Projects</li>
+        </ul>
+        <button id="join-btn">Join Us on Our Journey</button>
+
+        <!-- Message that appears after clicking the Join Us button -->
+        <div id="join-message" class="message">
+            Thank you for your interest! We are excited to have you on board.
+        </div>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer>
+    <p>&copy; 2024 <span id="footer-project-name">Robotica</span>. All Rights Reserved.</p>
+    <a href="privacy.html">Privacy Policy</a> | 
+    <a href="terms.html">Terms of Service</a>
+</footer>
+
+<script>
+    // Replace placeholders with the actual project name
+    const projectName = "Robotica";
+    document.getElementById("project-name").textContent = projectName;
+    document.getElementById("project-name-2").textContent = projectName;
+    document.getElementById("footer-project-name").textContent = projectName;
+
+    // Show message when "Join Us" button is clicked
+    document.getElementById("join-btn").addEventListener("click", function() {
+        const messageDiv = document.getElementById("join-message");
+        messageDiv.style.display = "block"; // Show the message
+    });
+</script>
+
+</body>
+</html>

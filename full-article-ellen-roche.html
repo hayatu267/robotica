@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professor Ellen Roche - Article</title>
+
+    <style>
+        /* Global styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Container for the article */
+        .article-container {
+            max-width: 800px;
+            margin: 40px auto;
+            background-color: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            animation: fadeIn 1s ease;
+        }
+
+        /* Image container with animation */
+        .article-image {
+            width: 100%;
+            height: auto;
+            border-bottom: 4px solid #007bff;
+            transition: transform 0.3s ease;
+            overflow: hidden;
+        }
+
+        .article-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        /* Hover effect on the image */
+        .article-image img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Video container */
+        .article-video {
+            margin: 20px 0;
+            width: 100%;
+        }
+
+        .article-video video {
+            width: 100%;
+            border-radius: 10px;
+            transition: opacity 0.3s ease;
+        }
+
+        .article-video video:hover {
+            opacity: 0.8;
+        }
+
+        /* Article content styling */
+        .article-content {
+            padding: 20px;
+        }
+
+        /* Headings */
+        .article-content h1,
+        .article-content h2 {
+            color: #007bff;
+            margin-bottom: 10px;
+            font-size: 1.8em;
+            animation: slideIn 1.2s ease;
+        }
+
+        /* Enhanced Paragraph styling */
+        .article-content p {
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 20px;
+            text-align: justify;
+            padding: 15px;
+            background-color: #fafafa;
+            border-left: 4px solid #007bff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            line-height: 1.8;
+            letter-spacing: 0.5px;
+            border-radius: 8px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        /* Hover effect for the paragraph */
+        .article-content p:hover {
+            background-color: #eaf2ff;
+            transform: scale(1.02);
+        }
+
+        /* Emphasized text styling */
+        .article-content p strong {
+            color: #007bff;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Animation for article fade in */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Animation for sliding in the headings */
+        @keyframes slideIn {
+            from {
+                transform: translateX(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        /* Fade in and up for paragraphs */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Toggle section initially hidden */
+        #toggleSection {
+            display: none;
+        }
+
+        /* Show the section when the 'show' class is added */
+        .show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <img src="ellen.jpg" alt="ellan.jpg">
+
+    <p>Before she had even earned her bachelor’s degree, MIT professor and biomedical engineer Ellen Roche was gaining research experience in the medical device industry. In her third year at the National University of Ireland at Galway, Roche participated in a biomedical engineering program in which students worked at companies developing new devices for patient care.</p>
+
+    <p>“I worked on cardiovascular implants during my placement and loved it,” says Roche, an associate professor at MIT’s Institute for Medical Engineering and Science (IMES) and Department of Mechanical Engineering. “For me, early experience in the medical device industry was very influential because it showed me the elaborate process of what happens from the time a technology is designed at the bench, as it is developed into a meticulously tested and reliable device that will actually be implanted in a human.”</p>
+    
+    <p>In graduate school, a similar program led Roche first to Mednova Ltd. in Galway and then to its sister company, Abbott Vascular in California, initially for a six-month stay. Roche enjoyed the work so much that she ended up staying three and a half years. While at Mednova and Abbott, she worked on a carotid artery filter designed to prevent stroke during the procedure when a stent is implanted. She also investigated coating parts of the stents with drugs that prevent arteries from becoming occluded.</p>
+    
+    <p>Roche, who earned tenure at MIT in July 2023, directs the Therapeutic Technology Design and Development Lab, which incorporates soft robotics, advanced fabrication methods, and computational analysis tools to develop novel devices that help to heal the heart, lungs, and other tissues. Some of the devices her team designs are intended for implantation into patients, such as a soft robotic ventilator, while others, such as a 3D-printed replica of a patient’s heart, enable research and testing of other therapies.</p>
+    
+    <p>She encourages her students to find ways to collaborate and be flexible — and to get some kind of industry experience while still in school. She says she tells them, “Be open to accepting good opportunities as they arise, work with like-minded people, and work hard at what you are doing, but readapt when you need to."</p>
+    
+    <p>“There’s so much that’s very hard to even imagine until you spend some time in industry, including regulatory submissions, quality control, clinical studies, manufacturing considerations, sterilization, reliability, packaging, labeling, distribution, and sales. It really is a concerted effort of many teams with many skills to get a device to first-in-human studies,” Roche says. “Having said that, it’s one of the most rewarding.”</p>
+    
+    <p>Born in Galway, the daughter of a civil engineer father and a mother who was a radiographer, Roche always loved math, science, and building things, and was drawn to medicine as well. She says she chose biomedical engineering because of its interdisciplinary nature and its potential for impacting society.</p>
+    
+    <p>Roche says her mother had a “huge influence” on her career choices.
+
+        “She brought me to the hospital to meet with people using various medical devices, and introduced me to one of my mentors in industry,” she says. “She had taught herself, as the local girls’ school she attended did not teach advanced (or honors) math.”</p>
+    
+    <p>After working at Abbott, Roche says she found she wanted to expand her studies and learn new technologies that could be applied to medical devices. She returned to school, enrolling in a bioengineering master’s program at Trinity College in Dublin. While earning her degree, she also worked at Medtronic, where she helped develop a replacement valve for the aorta that was brought all the way from conception to clinical application in humans, a process she says she was fortunate to experience firsthand.</p>
+    
+    <p>She also studied medicine at the Royal College of Surgeons in Ireland before being awarded at Fulbright Scholarship to pursue her PhD.
+
+        “Receiving the Fulbright Science and Technology award solidified my plans to pursue graduate study in the U.S.,” she says. She chose as PhD advisors David Mooney, a professor of bioengineering, and Conor Walsh, a professor of engineering and applied sciences, at Harvard University. “They were (and still are) amazingly supportive of my personal and professional development,” she says.</p>
+
+    <button id="toggleButton">Show More Details</button>
+
+    <div id="toggleSection">
+        <p>Roche has worked on a number of medical devices, including the soft, implantable ventilator; a mechanism that prevents the buildup of scar tissue; and the robotic heart, created by using 3D printing. For the robotic heart, Roche and her team start with an MRI scan of a patient’s heart and, using a soft material, print a replica of the heart, matching the anatomy, including any defects. With such a realistic model, the researchers can then apply different treatments, such as prosthetic valves or other implantable devices, in order to test them and learn more about the biomechanics that are involved.</p>
+
+        <p>“We can look at various devices and tune the heart, depending on what we’re trying to test,” Roche said in the “Curiosity Unbounded” podcast with MIT President Sally Kornbluth.
+
+            The 3D-printed heart, and other medical simulators Roche has worked on, greatly facilitate and improve the testing of patient interventions — and may one day also be used as implantable devices in humans.
+            
+            “You can envision the people who are at end-stage heart failure, who are waiting for a transplant and on these long lists, could actually have a printed, entirely synthetic, beating heart,” Roche told Kornbluth.</p>
+        
+        <p>Roche’s work has garnered many awards, including a National Science Foundation CAREER award in 2019, and boosts to her entrepreneurship. Her medical device startup, Spheric Bio, which is developing a minimally invasive heart implant aimed at preventing strokes, won the Faculty Founders Initiative Grand Prize in 2022 and the Lab Central Ignite Golden Ticket, which supports startup founders from traditionally underrepresented groups in biotechnology.
+
+            Meanwhile, in a dual faculty appointment in mechanical and medical engineering, Roche won the Thomas McMahon Mentoring Award in 2020, which each year goes to a person who “through the warmth of their personality, inspires and nurtures [Harvard-MIT Program in Health Sciences and Technology] students in their scientific and personal growth.” She also received the Harold E. Edgerton Faculty Achievement Award in 2023, in recognition of exceptional teaching, research, and service.</p>
+        
+        <p>The current research advances that excite Roche most, she says, include treatments and devices that can be customized to be patient-specific, such as in silico trials and digital twins where computational approaches can facilitate the investigation various interventions and prediction of their outcomes.
+
+            Roche’s expanding research on physical biorobotic simulators and computational models has attracted interest from industry and clinical teams. She was recently approached by a local hospital to build models for training heart surgeons on how to select which pump or ventricular assist device to use depending on a patient’s particular case. The models allow the surgeons to explore the efficacy of the assist devices at work.
+            </p>
+           <p> Roche has three young daughters, whom she often brings to work, where “they love the environment, the students, and the lab,” she says.
+            
+                Somehow, she also finds time to do triathlons, travel, and sample some of the local brews of New England. She’s currently planning to participate in a triathlon with her two PhD co-advisors, Mooney and Walsh. Luckily, she says she does her best thinking while running, biking, or swimming — or late at night.
+
+Active and successful in so many realms, Roche provides seemingly simple advice to her students who want to have an impact on the world: “Find a way to combine what you love, what you are good at, and what will help others.”
+            </p>
+    </div>
+
+    <script>
+        // JavaScript to toggle the hidden section
+        const toggleButton = document.getElementById('toggleButton');
+        const toggleSection = document.getElementById('toggleSection');
+
+        toggleButton.addEventListener('click', () => {
+            toggleSection.classList.toggle('show');
+            toggleButton.textContent = toggleSection.classList.contains('show') ? 'Hide Details' : 'Show More Details';
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Article - Diffusion Forcing in AI Robotics</title>
+ 
+</head>
+<style>
+  /* Global styles */
+  * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Roboto', Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    /* Header Styling */
+    header {
+        background-color: #007bff;
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    header .logo {
+        font-size: 1.8em;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    header nav {
+        margin-top: 10px;
+    }
+
+    header nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 1.1em;
+        transition: color 0.3s ease;
+    }
+
+    header nav a:hover {
+        color: #ffe600;
+    }
+
+    /* Footer Styling */
+    footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+        margin-top: 40px;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+
+    footer p {
+        margin-bottom: 10px;
+    }
+
+    footer a {
+        color: #007bff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+        color: #ffe600;
+    }
+
+    footer .social-icons a {
+        margin: 0 10px;
+        font-size: 1.4em;
+    }
+
+    /* Container for the article */
+    .article-container {
+        max-width: 800px;
+        margin: 40px auto;
+        background-color: #fff;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        overflow: hidden;
+        animation: fadeIn 1s ease;
+    }
+
+    /* Image container with animation */
+    .article-image {
+        width: 100%;
+        height: auto;
+        border-bottom: 4px solid #007bff;
+        transition: transform 0.3s ease;
+        overflow: hidden;
+    }
+
+    .article-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: transform 0.3s ease;
+        cursor: pointer;
+    }
+
+    /* Hover effect on the image */
+    .article-image img:hover {
+        transform: scale(1.05);
+    }
+
+    /* Video container */
+    .article-video {
+        margin: 20px 0;
+        width: 100%;
+    }
+
+    .article-video video {
+        width: 100%;
+        border-radius: 10px;
+        transition: opacity 0.3s ease;
+    }
+
+    .article-video video:hover {
+        opacity: 0.8;
+    }
+
+    /* Article content styling */
+    .article-content {
+        padding: 20px;
+    }
+
+    /* Headings */
+    .article-content h1,
+    .article-content h2 {
+        color: #007bff;
+        margin-bottom: 10px;
+        font-size: 1.8em;
+        animation: slideIn 1.2s ease;
+    }
+
+    /* Enhanced Paragraph styling */
+    .article-content p {
+        font-size: 1.1em;
+        color: #555;
+        margin-bottom: 20px;
+        text-align: justify;
+        padding: 15px;
+        background-color: #fafafa;
+        border-left: 4px solid #007bff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        line-height: 1.8;
+        letter-spacing: 0.5px;
+        border-radius: 8px;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+        animation: fadeInUp 0.8s ease;
+    }
+
+    /* Hover effect for the paragraph */
+    .article-content p:hover {
+        background-color: #eaf2ff;
+        transform: scale(1.02);
+    }
+
+    /* Emphasized text styling */
+    .article-content p strong {
+        color: #007bff;
+        font-weight: bold;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Animation for article fade in */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    /* Animation for sliding in the headings */
+    @keyframes slideIn {
+        from {
+            transform: translateX(-50px);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    /* Fade in and up for paragraphs */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+</style>
+<body>
+    <header>
+        <div class="logo">Robotica</div>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+<div class="article-container">
+    <div class="article-content">
+        <h1>Diffusion Forcing: Bridging the Gap in AI Robotics</h1>
+       <div class="article-image"> 
+        <img src="mit.jpeg" alt="mit.jpeg">
+    </div>
+        <p>
+            In the current AI zeitgeist, sequence models have skyrocketed in popularity for their ability to analyze data and predict what to do next. For instance, you’ve likely used next-token prediction models like ChatGPT, which anticipate each word (token) in a sequence to form answers to users’ queries. There are also full-sequence diffusion models like Sora, which convert words into dazzling, realistic visuals by successively “denoising” an entire video sequence.
+        </p>
+        <p>
+            Researchers from MIT’s Computer Science and Artificial Intelligence Laboratory (CSAIL) have proposed a simple change to the diffusion training scheme that makes this sequence denoising considerably more flexible.
+        </p>   
+        <h2>Researchers from MIT CSAIL: Diffusion Forcing</h2>
+        <p>
+            When applied to fields like computer vision and robotics, the next-token and full-sequence diffusion models have capability trade-offs. Next-token models can spit out sequences that vary in length. However, they make these generations while being unaware of desirable states in the far future — such as steering its sequence generation toward a certain goal 10 tokens away — and thus require additional mechanisms for long-horizon (long-term) planning.
+        </p>
+        <p>When applied to fields like computer vision and robotics, the next-token and full-sequence diffusion models have capability trade-offs. Next-token models can spit out sequences that vary in length. However, they make these generations while being unaware of desirable states in the far future — such as steering its sequence generation toward a certain goal 10 tokens away — and thus require additional mechanisms for long-horizon (long-term) planning. Diffusion models can perform such future-conditioned sampling, but lack the ability of next-token models to generate variable-length sequences.</p>
+        
+        <p>Researchers from CSAIL want to combine the strengths of both models, so they created a sequence model training technique called “Diffusion Forcing.” The name comes from “Teacher Forcing,” the conventional training scheme that breaks down full sequence generation into the smaller, easier steps of next-token generation (much like a good teacher simplifying a complex concept).</p>
+        <div class="article-video">
+            <video controls>
+                <source src="article1.mp4" type="video/mp4">
+                <source src="article1.webm" type="video/webm">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <p>Diffusion Forcing found common ground between diffusion models and teacher forcing: They both use training schemes that involve predicting masked (noisy) tokens from unmasked ones. In the case of diffusion models, they gradually add noise to data, which can be viewed as fractional masking. The MIT researchers’ Diffusion Forcing method trains neural networks to cleanse a collection of tokens, removing different amounts of noise within each one while simultaneously predicting the next few tokens. The result: a flexible, reliable sequence model that resulted in higher-quality artificial videos and more precise decision-making for robots and AI agents.</p>
+
+        <p>By sorting through noisy data and reliably predicting the next steps in a task, Diffusion Forcing can aid a robot in ignoring visual distractions to complete manipulation tasks. It can also generate stable and consistent video sequences and even guide an AI agent through digital mazes. This method could potentially enable household and factory robots to generalize to new tasks and improve AI-generated entertainment.</p>
+
+        <p>“Sequence models aim to condition on the known past and predict the unknown future, a type of binary masking. However, masking doesn’t need to be binary,” says lead author, MIT electrical engineering and computer science (EECS) PhD student, and CSAIL member Boyuan Chen. “With Diffusion Forcing, we add different levels of noise to each token, effectively serving as a type of fractional masking. At test time, our system can “unmask” a collection of tokens and diffuse a sequence in the near future at a lower noise level. It knows what to trust within its data to overcome out-of-distribution inputs.”</p>
+
+        <p>In several experiments, Diffusion Forcing thrived at ignoring misleading data to execute tasks while anticipating future actions.</p>
+
+        <p>When implemented into a robotic arm, for example, it helped swap two toy fruits across three circular mats, a minimal example of a family of long-horizon tasks that require memories. The researchers trained the robot by controlling it from a distance (or teleoperating it) in virtual reality. The robot is trained to mimic the user’s movements from its camera. Despite starting from random positions and seeing distractions like a shopping bag blocking the markers, it placed the objects into its target spots.</p>
+
+        <p>To generate videos, they trained Diffusion Forcing on “Minecraft” game play and colorful digital environments created within Google’s DeepMind Lab Simulator. When given a single frame of footage, the method produced more stable, higher-resolution videos than comparable baselines like a Sora-like full-sequence diffusion model and ChatGPT-like next-token models. These approaches created videos that appeared inconsistent, with the latter sometimes failing to generate working video past just 72 frames.</p>
+
+        <p>Diffusion Forcing not only generates fancy videos, but can also serve as a motion planner that steers toward desired outcomes or rewards. Thanks to its flexibility, Diffusion Forcing can uniquely generate plans with varying horizon, perform tree search, and incorporate the intuition that the distant future is more uncertain than the near future. In the task of solving a 2D maze, Diffusion Forcing outperformed six baselines by generating faster plans leading to the goal location, indicating that it could be an effective planner for robots in the future.</p>
+
+
+        <p>
+            Across each demo, Diffusion Forcing acted as a full sequence model, a next-token prediction model, or both. According to Chen, this versatile approach could potentially serve as a powerful backbone for a “world model,” an AI system that can simulate the dynamics of the world by training on billions of internet videos. This would allow robots to perform novel tasks by imagining what they need to do based on their surroundings. For example, if you asked a robot to open a door without being trained on how to do it, the model could produce a video that’ll show the machine how to do it.
+        </p>
+        <p>The team is currently looking to scale up their method to larger datasets and the latest transformer models to improve performance. They intend to broaden their work to build a ChatGPT-like robot brain that helps robots perform tasks in new environments without human demonstration.</p>
+
+           <p> “With Diffusion Forcing, we are taking a step to bringing video generation and robotics closer together,” says senior author Vincent Sitzmann, MIT assistant professor and member of CSAIL, where he leads the Scene Representation group. “In the end, we hope that we can use all the knowledge stored in videos on the internet to enable robots to help in everyday life. Many more exciting research challenges remain, like how robots can learn to imitate humans by watching them even when their own bodies are so different from our own!”</p>
+            
+            <p>Chen and Sitzmann wrote the paper alongside recent MIT visiting researcher Diego Martí Monsó, and CSAIL affiliates: Yilun Du, a EECS graduate student; Max Simchowitz, former postdoc and incoming Carnegie Mellon University assistant professor; and Russ Tedrake, the Toyota Professor of EECS, Aeronautics and Astronautics, and Mechanical Engineering at MIT, vice president of robotics research at the Toyota Research Institute, and CSAIL member. Their work was supported, in part, by the U.S. National Science Foundation, the Singapore Defence Science and Technology Agency, Intelligence Advanced Research Projects Activity via the U.S. Department of the Interior, and the Amazon Science Hub. They will present their research at NeurIPS in December.</p>
+
+        <p><em>Published by MIT CSAIL, presented at NeurIPS December 2024.</em></p>
+    </div>
+</div>
+<footer>
+    <p>&copy; 2024 Robotica. All rights reserved.</p>
+    <div class="social-icons">
+        <a href="https://twitter.com/robotica" target="_blank">Twitter</a> |
+        <a href="https://linkedin.com/robotica" target="_blank">LinkedIn</a> |
+        <a href="https://github.com/robotica" target="_blank">GitHub</a>
+    </div>
+</footer>
+</body><script>
+// JavaScript to handle the image click and open the full article
+document.getElementById("read-article-link").addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent the default anchor behavior
+
+    // Redirect to the full article page
+    window.location.href = this.href;
+});
+</script>
+</html>
