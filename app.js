@@ -46,7 +46,7 @@ mongoose.connect(process.env.MONGO_URL)
 
 // Start the server on a specific port
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, '172.27.69.194' () => {
+app.listen(PORT,  () => {
     console.log(`Server is running on port ${PORT}`);
 });
 console.log('JWT Secret:', process.env.JWT_SECRET_KEY);
